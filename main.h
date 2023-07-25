@@ -1,5 +1,5 @@
-#ifndef MAIN_H
-#define MAIN_H
+#ifndef _PRINTF__H
+#define _PRINTF__H
 
 #include <stdarg.h>
 #include <stdio.h>
@@ -94,16 +94,16 @@ int print_octal(va_list ap, parameters_t *parameters);
 
 
 int print_from_to(char *S1, char *S2, char *except);
-int print_rev(va_list ap, paramerers_t *parameters);
+int print_rev(va_list ap, parameters_t *parameters);
 int print_rot13(va_list ap, parameters_t *parameters);
 
 int _isdigit(int e);
 int _strlen(char *s);
 int print_number(char *str, parameters_t *parameters);
 int print_number_right_shift(char *str, parameters_t *parameter);
-int print_number_left_shift(char *str, parameters_t *parameter)
+int print_number_left_shift(char *str, parameters_t *parameter);
 
-int init_parameters(parameters_t *parameters, va_list ap);
+void init_parameters(parameters_t *parameters, va_list ap);
 
 char *get_precision(char *p, parameters_t *parameters, va_list ap);
 

@@ -32,10 +32,9 @@ char *get_precision(char *s, parameters_t *parameters, va_list ap)
 	}
 	else
 	{
-		while (_isdigit(*e))
-			precision = precision * 10 + (*e++ - '0');
+		while (_isdigit(*s))
+			precision = precision * 10 + (*s++ - '0');
 	}
 	parameters->precision = precision;
 	return (s);
 }
-

@@ -16,7 +16,6 @@ int _isdigit(int e)
  * Return: The integer length of the string.
  */
 int _strlen(char *s)
-
 {
 	int i = 0;
 

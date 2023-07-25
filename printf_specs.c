@@ -31,7 +31,7 @@ int (*get_specifier(char *s))(va_list ap, parameters_t *parameters)
 	while (specifiers[i].specifier)
 	{
 		if (*s == specifiers[i].specifier[0])
-			return (specifiers[i].f);
+			return (specifiers[i].e);
 		i++;
 	}
 	return (NULL);

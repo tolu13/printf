@@ -5,7 +5,7 @@
  * @ap: arguement pointer (unused in this function)
  * Return: void
  */
-int init_parameters(parameters_t *parameters, va_list ap)
+void init_parameters(parameters_t *parameters, va_list ap)
 {
 	parameters->unsign = 0;
 

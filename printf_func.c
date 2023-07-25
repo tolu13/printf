@@ -38,7 +38,7 @@ int _printf(const char *format, ...)
 			s++;
 		if (!get_specifier(s))
 			total += print_from_to(start, s,
-					params->l_modifier || params->h_modifier ?
+					params.l_modifier || params.h_modifier ?
 					s - 1 : 0);
 		else
 			total += get_print_func(s, ap, &params);

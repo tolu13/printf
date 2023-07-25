@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * _puts - prints a string with newline
  * @str: the string to print
@@ -33,7 +32,8 @@ int _putchar(int c)
 		i = 0;
 	}
 	if (c != BUF_FLUSH)
+	{
 		buf[i++] = c;
+	}
 	return (1);
 }
-
