@@ -8,7 +8,7 @@ int _printf(const char *format, ...)
 {
 	int total = 0;
 	va_list ap;
-	char *s, *start
+	char *s, *start;
 
 	parameters_t params = PARAMETERS_INIT;
 
@@ -34,10 +34,10 @@ int _printf(const char *format, ...)
 		}
 			s = get_width(s, &params, ap);
 			s = get_precision(s, &params, ap);
-		if (get_modifier(s, params))
+		if (get_modifier(s, &params))
 			s++;
 		if (!get_specifier(s))
-			total += print_from_to(start, format,
+			total += print_from_to(start, s,
 					params->l_modifier || params->h_modifier ?
 					s - 1 : 0);
 		else
