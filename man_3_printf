@@ -1,0 +1,97 @@
+.\" _printf man page
+.\"
+.\"
+.\"
+.TH _PRINTF "July 23 2023" "1.0" "Function Manual for 0x11.C - printf"
+.SH NAME
+.SH ""
+
+.B _printf
+- custom version for printf function.
+
+.SH SYNOPSIS
+.SH ""
+#include "main.h"
+
+int _printf(const char *[FORMAT], ...);
+
+.SH DESCRIPTION
+.SH ""
+
+- the printf() sends formatted output to stdout
+also prints ARGUEMENTS based on FORMAT
+
+Format specifiers (beginning with %), the additional arguements followinng format are inserted
+
+Example:
+_printf("%d", 10);
+
+.SH FLAG SPECIFIERS
+.SH ""
+
+- Custom and non custom specifiers
+
+.SH LENGTH MODIFIERS
+.SH ""
+
+-length modifiers
+
+.SH CONVERSION SPECIFIERS
+.SH ""
+
+.RS
+- Current arguements handeled by conversion specifiers
+
+.IT
+.B %
+- % This symbol no arguement is converted. the complete conversion specification is %%.
+
+.IT
+.B c
+- The integer arguement or character is converted to an unsigned char, and the resulting character is written.
+
+.IT
+.B d, i
+- int arguement is converted to signed decimal notation
+
+.IT
+.B s
+-str - s handles s conversion specifier if the arguement value is not a pointer to a literal string.
+
+.IT
+.B o, u, x, X
+-The unsigned int arguement is converted to unsigned octal (o), unsigned decimal (u), unsigned hexadecimal (x and X) notation.
+
+.IT
+.B b
+- The unsigned int arguement is converted to binary.
+
+.IT
+.B r
+- prints string in reverse
+
+.IT 
+.B p
+- The pointer arguement is printed in hexadecimal
+
+
+.IT
+.B S
+- The ascii <32 & > 127 has to appear in the arguement string converted to hexadecimal preceeded by \x
+
+.IT
+.B R
+- prints encrypted rot 13
+
+.RE
+.P
+
+.SH "AUTHORS"
+.SH ""
+
+TOLUOPE OLANREWAJU AND PAUL IYIADE
+
+.SH "AUTHORS GITHUB PROFILE"
+.SH ""
+
+@tolu13 and @thugginnn
