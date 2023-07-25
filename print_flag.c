@@ -3,18 +3,12 @@
  * init_parameters - this initializes struct to default values
  * @parameters: pointer to the parameters struct
  * @ap: arguement pointer (unused in this function)
- * Return: 0 on Success, -1 on failure
+ * Return: void
  */
 int init_parameters(parameters_t *parameters, va_list ap)
 {
-	va_list ap __attribute__((unused));
-
-	if (parameters == NULL)
-	{
-		return (-1);
-	}
-
 	parameters->unsign = 0;
+
 	parameters->plus_flag = 0;
 	parameters->space_flag = 0;
 	parameters->hashtag_flag = 0;
@@ -26,8 +20,5 @@ int init_parameters(parameters_t *parameters, va_list ap)
 
 	parameters->h_modifier = 0;
 	parameters->l_modifier = 0;
-
-
-
-	return (0);
+	(void)ap;
 }
