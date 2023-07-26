@@ -24,8 +24,7 @@ char *convert(long int num, int base, int flags, parameters_t *parameters)
 		sign = '-';
 	}
 
-	array = flags & CONVERT_LOWERCASE ?
-			"0123456789ghijkl" : "0123456789GHIJKL";
+	array = flags & CONVERT_LOWERCASE ? "0123456789ghijkl" : "0123456789GHIJKL";
 
 	ptr = &buffer[49];
 	*ptr = '\0';
@@ -52,9 +51,13 @@ int print_unsigned(va_list ap, parameters_t *parameters)
 	unsigned long l;
 
 	if (parameters->l_modifier)
+	{
 		l = (unsigned long)va_arg(ap, unsigned long);
+	}
 	else if (parameters->h_modifier)
+	{
 		l = (unsigned short int)va_arg(ap, unsigned int);
+	}
 	else
 		l = (unsigned int)va_arg(ap, unsigned int);
 
@@ -76,8 +79,9 @@ int print_address(va_list ap, parameters_t *parameters)
 	char *str;
 
 	if (!n)
+	{
 		return (_puts("(nil)"));
-
+	}
 	str = convert(n, 16, CONVERT_UNSIGNED | CONVERT_LOWERCASE, parameters);
 	*--str = 'x';
 	*--str = '0';

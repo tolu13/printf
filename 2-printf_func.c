@@ -113,4 +113,3 @@ int print_octal(va_list ap, parameters_t *parameters)
 	parameters->unsign = 1;
 	return (e += print_number(str, parameters));
 }
-
